@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>CloudApp Contatos</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+
+
+    <!-- Custom styles for this template -->
+    <style>
+        header {
+            padding: 154px 0 100px;
+        }
+
+        @media (min-width: 992px) {
+            header {
+                padding: 156px 0 100px;
+            }
+        }
+
+        section {
+            padding: 150px 0;
+        }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">CloudApp Contatos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="bg-primary text-white">
+        <div class="container text-center">
+            <h1>30SCJ - Desenvolvimento de Aplicações usando Cloud Computing</h1>
+            <p class="lead">Bem-vindo ao Cadastro de Usu&aacute;rio </p>
+        </div>
+    </header>
+
+    <section id="lista">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+
+                    <h2>Lista de Usu&aacute;rios</h2>
+                    <table id="contatos" style="width:100%" class="table table-bordered table-dark">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nome</th>
+                                <th>E-mail</th>
+                                <th>Telefone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="insere" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+
+                    <h2>Inserir Usu&aacute;rio</h2>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">Cadastro de Usu&aacute;rio</h4>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" role="form" autocomplete="off">
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Nome</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" placeholder="Nome" id="nome" type="text" value="">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Email</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="email" id="email" placeholder="exemplo@email.com">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label">Telefone</label>
+                                    <div class="col-lg-9">
+                                        <input class="form-control" type="text" id="telefone" placeholder="(00) 1111-2222">
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label form-control-label"></label>
+                                    <div class=" offset-md-9">
+                                        <button type="button" class="btn btn-outline-primary" id="add-contato">Adicionar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="grupo">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Grupo</h2>
+                    <p class="lead">
+                        <p>RM40644 - Agner Geronimo Munhoz</p>
+
+                        <p>RM43496 - Felipe Francesconi Riserio</p>
+
+                        <p>RM40570 - Mateus Artur Vieira Santos</p>
+
+                        <p>RM40570 - Victor Luiz de Lima Pereira Monteiro</p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white"> CloudApp Contatos </p>
+        </div>
+        <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script>
+        (function ($) {
+            "use strict";
+            $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: (target.offset().top - 54)
+                        }, 1000, "easeInOutExpo");
+                        return false;
+                    }
+                }
+            });
+
+            $('.js-scroll-trigger').click(function () {
+                $('.navbar-collapse').collapse('hide');
+            });
+
+            $('body').scrollspy({
+                target: '#mainNav',
+                offset: 54
+            });
+
+        })(jQuery);
+    </script>
+
+    <script>
+        $(function () {
+
+            var $contatos = $('tbody');
+            var $nome = $('#nome');
+            var $email = $('#email');
+            var $telefone = $('#telefone');
+
+            $.ajax({
+                type: 'GET',
+                url: 'https://cloudapp-30scj.herokuapp.com/contato/lista',
+                success: function (contatos) {
+                    $.each(contatos, function (i, contato) {
+                        $contatos.append('<tr><td>' + contato.nome + '</td><td>' + contato.email + '</td><td>' + contato.telefone + '</td></tr>');
+                    });
+                    $('table').DataTable();
+                },
+                error: function () {
+                    alert('Erro ao carregar contatos!');
+                }
+            });
+
+            $('#add-contato').on('click', function () {
+                var contato = {
+                    nome: $nome.val(),
+                    email: $email.val(),
+                    telefone: $telefone.val(),
+                };
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'https://cloudapp-30scj.herokuapp.com/contato',
+                    contentType: "application/json",
+                    dataType: "json",
+                    data: JSON.stringify(contato),
+                    success: function (novoContato) {
+                        $contatos.append('<tr><td>' + novoContato.nome + '</td><td>' + novoContato.email + '</td><td>' + novoContato.telefone + '</td></tr>');
+                    },
+                    error: function () {
+                        alert('Erro ao adicionar contato!');
+                    }
+                });
+
+            });
+        });
+    </script>
+</body>
+
+</html>
